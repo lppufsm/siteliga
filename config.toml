@@ -100,5 +100,6 @@ icon = "ion-social-twitter"
 url = "#"
 
 [[params.socialIcon]]
-icon = "ion-email"
-url = "mailto:lppufsm@gmail.com"
+icon = "ion-social-github"
+url = "https://github.com/lppufsm"
+
