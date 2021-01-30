@@ -101,4 +101,4 @@ url = "#"
 
 [[params.socialIcon]]
 icon = "ion-email"
-url = "<a href="mailto:lppufsm@gmail.com">Send Email</a>"
+url = "mailto:lppufsm@gmail.com"
