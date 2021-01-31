@@ -6,7 +6,16 @@
     <description>Recent content on Liga de Políticas Públicas UFSM</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>opa</title>
+      <link>/post/opa/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/opa/</guid>
+      <description>Texto texto texto</description>
+    </item>
+    
     <item>
       <title>Teste</title>
       <link>/re/teste/</link>
