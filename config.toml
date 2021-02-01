@@ -19,7 +19,7 @@ weight  = 3
 [[menu.main]]
 weight  = 4
 name    = "Recomendações"
-url = "re"
+url = "recomendacoes"
  
 [[menu.main]]
 name    = "Eventos"
@@ -28,7 +28,7 @@ weight  = 5
 
 [[menu.main]]
 name    = "R"
-url     = "re"
+url     = "r"
 weight  = 6
 
 [[menu.main]]
