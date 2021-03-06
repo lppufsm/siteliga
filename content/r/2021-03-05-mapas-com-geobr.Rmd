@@ -69,6 +69,26 @@ leaflet(escolas) %>%
 ```
 
 
+### Unidades de Saude
+
+```{r out.width=c('50%', '50%'), fig.show='hold'}
+us<-read_health_facilities()
+
+#código do município com 6 dígitos neste
+us<-us %>% filter(code_muni == 431690)
+
+ggplot()+
+  geom_sf(data = sm)+
+  geom_sf(data = us)+
+  theme_minimal()
+
+leaflet(us)%>% 
+  addTiles() %>% 
+  addCircles()
+```
+
+
+
 ### Referências
 
 Joe Cheng, Bhaskar Karambelkar and Yihui Xie (2021). leaflet: Create Interactive Web Maps with the JavaScript 'Leaflet' Library. R package version 2.0.4.1. <https://CRAN.R-project.org/package=leaflet>.
