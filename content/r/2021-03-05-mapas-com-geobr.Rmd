@@ -53,11 +53,16 @@ ggplot()+
 
 ### Com leaflet
 
-```{r}
+```{r out.width="100%"}
 library(leaflet)
 library(tidyverse)
 
-leaflet(escolas) %>% addTiles() %>% addMarkers(popup =~paste("<B>Nome:</B> ", name_school, "<br>", "<B>Dependência Administrativa:</B> ", admin_category, "<br>"), label = ~name_school)
+leaflet(escolas) %>% 
+  addTiles() %>% 
+  addMarkers(popup =
+             ~paste("<B>Nome:</B> ", name_school, "<br>",
+                    "<B>Dependência Administrativa:</B> ", admin_category, "<br>"),
+             label = ~name_school)
 
 
 
