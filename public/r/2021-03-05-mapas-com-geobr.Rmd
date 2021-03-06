@@ -11,13 +11,12 @@ tags:
   - geobr
 ---
 
-
-```{r setup, echo=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(
 	echo = TRUE,
+	fig.keep = "all",
 	message = FALSE,
-	warning = FALSE,
-	results = "hide"
+	warning = FALSE
 )
 ```
 
@@ -25,20 +24,27 @@ Blablabla
 
 ### Pacotes necessários
 
-```{r}
+```{r, results='hide'}
 library(tidyverse)
 library(geobr)
-library(ggthemes)
 
 sm<-read_municipality(code_muni = 4316907)
 escolas<-read_schools()
 escolas<-escolas %>% filter(name_muni == "Santa Maria",
                             abbrev_state == "RS")
 
+```
 
+
+```{r out.width=c('50%', '50%'), fig.show='hold'}
 
 ggplot()+
-  geom_sf(data = sm, fill="#2D3E50", color="#FEBF57", size=.5)+
+  geom_sf(data = sm, size=.5)+
+  geom_sf(data = escolas)+
+  theme_minimal()
+
+ggplot()+
+  geom_sf(data = sm, fill="#2D3E50", color="orange", size=.5)+
   geom_sf(data = escolas, color = "orange")+
   theme_minimal()
  
@@ -49,26 +55,22 @@ ggplot()+
 
 ```{r}
 library(leaflet)
-library(leaflet.extras)
+library(tidyverse)
 
-sm<-read_municipality(code_muni = 4316907)
-escolas<-read_schools()
-escolas<-escolas %>% filter(name_muni == "Santa Maria",
-                            abbrev_state == "RS")
-
-leaflet(escolas) %>% addTiles() %>% addCircles(popup =~paste("<B>Nome:</B> ", name_school, "<br>", "<B>Dependência Administrativa:</B> ", admin_category, "<br>"), label = ~name_school, opacity = 1, weight = 8)
+leaflet(escolas) %>% addTiles() %>% addMarkers(popup =~paste("<B>Nome:</B> ", name_school, "<br>", "<B>Dependência Administrativa:</B> ", admin_category, "<br>"), label = ~name_school)
 
 
-```
 
-```{r}
-htmltools::includeHTML("map.html")
 ```
 
 
 ### Referências
 
-Pereira, R.H.M.; Gonçalves, C.N.; et. all (2019) geobr: Loads Shapefiles of Official Spatial Data Sets of Brazil. GitHub repository - <https://github.com/ipeaGIT/geobr>.
+Joe Cheng, Bhaskar Karambelkar and Yihui Xie (2021). leaflet: Create Interactive Web Maps with the JavaScript 'Leaflet' Library. R package version 2.0.4.1. <https://CRAN.R-project.org/package=leaflet>.
+
+Pereira, R.H.M.; Gonçalves, C.N.; et al. (2019) geobr: Loads Shapefiles of Official Spatial Data Sets of Brazil. GitHub repository - <https://github.com/ipeaGIT/geobr>.
+
+
 
 
 

@@ -36,9 +36,15 @@ escolas<-escolas %>% filter(name_muni == "Santa Maria",
 ```
 
 
-```{r}
+```{r out.width=c('50%', '50%'), fig.show='hold'}
+
 ggplot()+
-  geom_sf(data = sm, fill="#2D3E50", color="#FEBF57", size=.5)+
+  geom_sf(data = sm, size=.5)+
+  geom_sf(data = escolas)+
+  theme_minimal()
+
+ggplot()+
+  geom_sf(data = sm, fill="#2D3E50", color="orange", size=.5)+
   geom_sf(data = escolas, color = "orange")+
   theme_minimal()
  
@@ -49,8 +55,10 @@ ggplot()+
 
 ```{r}
 library(leaflet)
+library(tidyverse)
 
-leaflet(escolas) %>% addTiles() %>% addCircles(popup =~paste("<B>Nome:</B> ", name_school, "<br>", "<B>Dependência Administrativa:</B> ", admin_category, "<br>"), label = ~name_school, opacity = 1, weight = 8)
+leaflet(escolas) %>% addTiles() %>% addMarkers(popup =~paste("<B>Nome:</B> ", name_school, "<br>", "<B>Dependência Administrativa:</B> ", admin_category, "<br>"), label = ~name_school)
+
 
 
 ```
