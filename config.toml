@@ -6,15 +6,16 @@ theme = "timer-hugo"
 # We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
 
 # Navbar Menus
+
 [[menu.main]]
 name    = "Sobre"
 url     = "about"
 weight  = 2
 
 [[menu.main]]
-weight  = 3
 name    = "Publicações"
 hasChildren = true
+weight  = 3
 
   [[menu.main]]
   parent = "Publicações"
@@ -26,7 +27,6 @@ hasChildren = true
   name    = "R"
   url     = "r"
   
- 
 [[menu.main]]
 name    = "Eventos"
 url     = "service"
