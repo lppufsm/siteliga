@@ -12,29 +12,30 @@ url     = "about"
 weight  = 2
 
 [[menu.main]]
-name    = "Publicações"
-url     = "blog"
 weight  = 3
+name    = "Publicações"
+hasChildren = true
 
-[[menu.main]]
-weight  = 4
-name    = "Recomendações"
-url = "recomendacoes"
+  [[menu.main]]
+  parent = "Publicações"
+  name = "Textos"
+  url = "blog"
+  
+  [[menu.main]]
+  parent = "Publicações"
+  name    = "R"
+  url     = "r"
+  
  
 [[menu.main]]
 name    = "Eventos"
 url     = "service"
-weight  = 5
-
-[[menu.main]]
-name    = "R"
-url     = "r"
-weight  = 6
+weight  = 4
 
 [[menu.main]]
 name    = "Contato"
 url     = "contact"
-weight  = 7
+weight  = 5
 
 # Site Params
 [params]

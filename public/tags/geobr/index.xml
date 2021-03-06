@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>geobr on Liga de Políticas Públicas UFSM</title>
+    <link>/tags/geobr/</link>
+    <description>Recent content in geobr on Liga de Políticas Públicas UFSM</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/geobr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mapas com geobr</title>
+      <link>/r/mapas-com-geobr/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/r/mapas-com-geobr/</guid>
+      <description>Blablabla
+Pacotes necessárioslibrary(tidyverse)library(geobr)library(ggthemes)sm&amp;lt;-read_municipality(code_muni = 4316907)escolas&amp;lt;-read_schools()escolas&amp;lt;-escolas %&amp;gt;% filter(name_muni == &amp;quot;Santa Maria&amp;quot;,abbrev_state == &amp;quot;RS&amp;quot;)ggplot()+geom_sf(data = sm, fill=&amp;quot;#2D3E50&amp;quot;, color=&amp;quot;#FEBF57&amp;quot;, size=.5)+geom_sf(data = escolas, color = &amp;quot;orange&amp;quot;)+theme_minimal()Com leafletlibrary(leaflet)library(leaflet.extras)sm&amp;lt;-read_municipality(code_muni = 4316907)escolas&amp;lt;-read_schools()escolas&amp;lt;-escolas %&amp;gt;% filter(name_muni == &amp;quot;Santa Maria&amp;quot;,abbrev_state == &amp;quot;RS&amp;quot;)leaflet(escolas) %&amp;gt;% addTiles() %&amp;gt;% addCircles(popup =~paste(&amp;quot;&amp;lt;B&amp;gt;Nome:&amp;lt;/B&amp;gt; &amp;quot;, name_school, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;&amp;lt;B&amp;gt;Dependência Administrativa:&amp;lt;/B&amp;gt; &amp;quot;, admin_category, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;), label = ~name_school, opacity = 1, weight = 8)htmltools::includeHTML(&amp;quot;map.</description>
+    </item>
+    
+  </channel>
+</rss>
