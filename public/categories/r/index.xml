@@ -18,15 +18,6 @@ Pacotes necessárioslibrary(tidyverse)library(geobr)sm&amp;lt;-read_municipal
     </item>
     
     <item>
-      <title>Teste</title>
-      <link>/recomendacoes/teste/</link>
-      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/recomendacoes/teste/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit expedita, iusto repellendus cumque, officia architecto consequatur illo fuga eum sed ut autem eos voluptas. Nemo, a, rem! Atque quisquam aperiam eaque tenetur autem, soluta itaque omnis. Minus nesciunt, sint, animi illum quo ab voluptate esse delectus unde maiores iure, quasi a suscipit ipsam aliquid voluptatem. Perspiciatis eveniet, pariatur illum aut cum dolor neque consequatur error aliquid facilis in quasi temporibus assumenda tempore, doloremque autem saepe enim nihil.</description>
-    </item>
-    
-    <item>
       <title>Hello R Markdown</title>
       <link>/blog/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
