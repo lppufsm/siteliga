@@ -53,7 +53,7 @@ ggplot()+
 
 ### Com leaflet
 
-```{r out.width="100%"}
+```{r out.width='100%'}
 library(leaflet)
 library(tidyverse)
 
@@ -68,26 +68,31 @@ leaflet(escolas) %>%
 
 ```
 
+<br/><br/>
+### Unidades de Saúde
 
-### Unidades de Saude
-
-```{r out.width=c('50%', '50%'), fig.show='hold'}
+```{r, results='hide'}
 us<-read_health_facilities()
 
 #código do município com 6 dígitos neste
 us<-us %>% filter(code_muni == 431690)
+```
 
+```{r, fig.align='center'}
 ggplot()+
   geom_sf(data = sm)+
   geom_sf(data = us)+
   theme_minimal()
+```
+<br/><br/>
 
+```{r out.width='100%'}
 leaflet(us)%>% 
   addTiles() %>% 
-  addCircles()
+  addMarkers()
 ```
 
-
+<br/><br/>
 
 ### Referências
 
